@@ -13,7 +13,7 @@ function add(numbers) {
     if (negativeNumbers.length > 0) {
         throw new Error('Negative numbers are not allowed');
     }
-    const result = allNumbers.filter((item) => item > 0).reduce((acc, item) => acc + parseInt(item), 0);
+    const result = allNumbers.filter((item) => item > 0 && item < 1000).reduce((acc, item) => acc + parseInt(item), 0);
     return result;
 }
 
