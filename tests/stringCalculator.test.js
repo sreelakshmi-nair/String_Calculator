@@ -20,7 +20,12 @@ test('should return the sum of numbers separated by commas', () => {
   expect(add("1,3,9,6,2")).toBe(21);
 });
 
-//New line as delimiter
+//New line and comma as delimiter
 test('should handle new lines between numbers', () => {
   expect(add("1\n2,3")).toBe(6);
+});
+
+//Exception for negative numbers
+test('should throw exception for negative numbers', () => {
+  expect(() => add("1,-2,3,-4")).toThrow("Negative numbers are not allowed");
 });
